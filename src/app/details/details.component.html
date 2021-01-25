@@ -1,0 +1,21 @@
+<p>DETALLES</p>
+<div *ngIf="invoice">
+
+  <h2>{{invoice.nombre | uppercase}} Details</h2>
+  <div><span>id: </span>{{invoice.id}}</div>
+  <div>
+    <label>IVA:
+      <input [(ngModel)]="invoice.iva" placeholder="name"/>
+    </label>
+    <label>producto:
+      <input [(ngModel)]="invoice.productos" placeholder="name"/>
+    </label>
+    <label>precio_unitario:
+      <input [(ngModel)]="invoice.precio_unitario" placeholder="name"/>
+    </label>
+    <label>TOTAL:
+      <input [(ngModel)]="invoice.total" placeholder="name"/>
+    </label>
+  </div>
+
+</div>

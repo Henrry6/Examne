@@ -1,0 +1,13 @@
+<h1>FACTURAS</h1>
+
+<ul class="heroes">
+  <li *ngFor="let invoice of invoices"
+    [class.selected]="invoice === selectedFact"
+    (click)="onSelect(invoice)">
+    <span >{{invoice.nombre}}</span> 
+    <span> {{invoice.cedula_o_ruc}}</span>
+  </li>
+</ul>
+
+
+<app-details  [invoice]="selectedFact"></app-details>
